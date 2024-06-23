@@ -74,7 +74,7 @@ const Pie = ({data}) => {
     ];
 
     // 计算进度条数据
-    const nutrients = ["fibroid", "Sodium", "Zinc", "Copper", "Manganese", "Selenium", "VitaminA", "VitaminC", "VitaminD", "VitaminE", "VitaminK", "Thiamin", "VitamnB12"];
+    const nutrients = ["fibroid", "Sodium", "Zinc", "Copper", "Manganese", "Selenium", "Thiamin"];
 
     const progressBars = nutrients.map((nutrient) => {
         const totalNeeded = nutrition_needing[nutrient];
