@@ -92,11 +92,12 @@ function App() {
             ...prevMessages,
             {
                 type: "user",
-                content: `Name: ${formData.name}, Age: ${formData.age}, Height: ${formData.height}, Weight: ${formData.weight}`,
+                content: `Name: ${formData.name}, Age: ${formData.age}, Height: ${formData.height}, Weight: ${formData.weight}, Others: ${formData.others}`,
             },
         ]);
 
         setLoading(true);
+
 
         axios
             .post(
@@ -109,7 +110,7 @@ function App() {
                     breakfast: formData.breakfast,
                     lunch: formData.lunch,
                     dinner: formData.dinner,
-                    others: "N/A",
+                    others: formData.others,
                     breakfast_annotations: "N/A",
                     lunch_annotations: "N/A",
                     dinner_annotations: "N/A",
