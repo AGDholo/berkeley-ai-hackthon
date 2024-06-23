@@ -11,7 +11,7 @@ const Pie = ({data}) => {
     // 计算每个营养素的摄入百分比
     const waterPercentage = calculatePercentage({
         total: nutrition_needing.water,
-        current: meal_nutrition.breakfast?.water ?? 0 + meal_nutrition.lunch?.water ?? 0 + meal_nutrition.dinner?.water ?? 0
+        current: (meal_nutrition.breakfast?.water ?? 0) + (meal_nutrition.lunch?.water ?? 0) + (meal_nutrition.dinner?.water ?? 0)
     });
     const proteinPercentage = calculatePercentage({
         total: nutrition_needing.protein,
