@@ -78,9 +78,9 @@ const Pie = ({data}) => {
 
     const progressBars = nutrients.map((nutrient) => {
         const totalNeeded = nutrition_needing[nutrient];
-        const breakfastAmount = meal_nutrition.breakfast?.[nutrient] ?? 0;
-        const lunchAmount = meal_nutrition.lunch?.[nutrient] ?? 0;
-        const dinnerAmount = meal_nutrition.dinner?.[nutrient] ?? 0;
+        const breakfastAmount = meal_nutrition.breakfast?.[nutrient.toLowerCase()] ?? 0;
+        const lunchAmount = meal_nutrition.lunch?.[nutrient.toLowerCase()] ?? 0;
+        const dinnerAmount = meal_nutrition.dinner?.[nutrient.toLowerCase()] ?? 0;
 
         const totalConsumed = breakfastAmount + lunchAmount + dinnerAmount;
 
