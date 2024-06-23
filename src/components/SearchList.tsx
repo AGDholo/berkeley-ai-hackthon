@@ -30,7 +30,7 @@ const SearchList: FC<SearchListProps> = ({search}) => {
 
     return (
         <div className="container mx-auto p-4">
-            <h2 className="text-xl font-bold mb-4">Restaurants Near UC Berkeley</h2>
+            <h2 className="text-xl font-bold mb-4">Restaurants Near by you</h2>
             <ul className="space-y-4">
                 {restaurants.map((restaurant, index) => index < 5 && (
                     <li key={index}
