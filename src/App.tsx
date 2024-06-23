@@ -40,6 +40,7 @@ function App() {
         breakfast: "",
         lunch: "",
         dinner: "",
+        others: "",
     });
 
     // 新增状态用于重置文件输入
@@ -325,6 +326,13 @@ function App() {
                                                type="file"
                                                key={fileInputKey}
                                                onChange={handleFileChange}/>
+                                    </div>
+
+                                    <div className="grid gap-1">
+                                        <Label>others</Label>
+                                        <Input id="others"
+                                               type="text"
+                                               onChange={handleInputChange}/>
                                     </div>
 
                                     <Button type="button"
